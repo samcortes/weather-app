@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build  --prod --base-href /app/weather --deploy-url /app/weather/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -46,7 +46,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 0 2px;
-    background: hsla(0,0%,100%,.48);
+    background: #0000006b;
     border-radius: 4px;
 }
 
