@@ -1,33 +1,21 @@
 <div *ngIf="weather">
-    <div class="Weather-today">
-
-        <div class="Weather-current">
-            <p class="Current-temp">
-                {{ weather.current.temp_c }}
-                <span class="Current-temp-symbol">C</span>
-            </p>
-            <p class="Weather-location">{{ weather.location.name }}, {{ weather.location.country }}</p>
-        </div>
-
-        <div class="Weather-current-temp">
-            <div class="Current-condition">
-                <img class="Current-condition-icon" src='{{ weather.current.condition.icon }}' />
-                {{ weather.current.condition.text }}
-            </div>
-            <div class="Current-temp-max">Wind {{ weather.current.wind_kph }} kph</div>
-        </div>
+    <div>
+        <p class="Weather-location">{{ weather.location.name }}, {{ weather.location.country }}</p>
+        <p class="weather-time">{{ weather.location.localtime }}</p>
     </div>
 
-    <ul class="Weather-forecast-list">
-        <li *ngFor="let forecast of weather.forecast.forecastday">
-            <div>{{ forecast.date }}</div>
-            <div>
-                <img class="Current-condition-icon" src="{{ forecast.day.condition.icon }}" />
-                {{ forecast.day.condition.text }}
+    <div class="Weather-today">
+        <div class="Weather-current">
+            <div class="Current-condition">
+                <img class="Current-condition-icon" src='{{ weather.current.weather_icons }}' />
+                {{ weather.current.weather_descriptions }}
             </div>
-            <div>{{ forecast.day.maxtemp_c }}/{{ forecast.day.mintemp_c }} <span class="icon-degree"></span>C</div>
-         </li>
-    </ul>
+            <p class="Current-temp">
+                {{ weather.current.temperature }}
+                <span class="Current-temp-symbol">C</span>
+            </p>
+        </div>
+    </div>
 </div>
 
 <div *ngIf="!weather">

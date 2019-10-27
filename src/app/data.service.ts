@@ -9,7 +9,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getWeather(city) {
-    return this.http.get('https://api.apixu.com/v1/forecast.json?key=8041f04fc47f4a438ff111127191903&q=' + city + '&days=14');
+    return this.http.get('https://api.weatherstack.com/current?access_key=10ba8d61dc7a9e9f32ce82b4da5d1ce4&query=' + city);
   }
 
   getLocation() {

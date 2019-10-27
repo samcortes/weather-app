@@ -1,6 +1,12 @@
 .Weather-location {
-    margin: 0;
-    font-size: 14px;
+    margin: 20px 0 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.weather-time {
+    margin: 0 0 20px;
+    text-align: center;
 }
 
 .Current-temp {
